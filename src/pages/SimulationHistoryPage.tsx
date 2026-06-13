@@ -48,9 +48,6 @@ export function SimulationHistoryPage() {
           <p className="text-muted-foreground mb-6 text-sm">
             Crie sua primeira simulação para começar a acompanhar seu progresso.
           </p>
-          <Button variant="primary" onClick={() => void navigate('/')}>
-            Criar nova simulação
-          </Button>
         </div>
       ) : (
         <div className="flex flex-col gap-3">
