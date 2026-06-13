@@ -77,10 +77,25 @@ export const simulationFormSteps = [
   },
 ] satisfies FormStepProps[]
 
-export type SimulationFormData = Record<(typeof simulationFormSteps)[number]['id'], string>
+export type SimulationFormData = {
+  income: string
+  expenses: string
+  debts: string
+  goalName: string
+  goalAmount: string
+  goalDeadline: string
+}
+
+export interface ChatMessage {
+  id: string
+  role: 'user' | 'assistant'
+  content: string
+  createdAt: string
+}
 
 export type SimulationRecord = SimulationFormData & {
   id: string
   createdAt?: string
   insight?: InsightData
+  conversation?: ChatMessage[]
 }
